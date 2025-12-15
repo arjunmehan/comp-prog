@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: Build and Run",
+            "type": "shell",
+            "command": "/opt/homebrew/bin/g++-15",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-Wall",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "&&",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "C++: Build Only",
+            "type": "shell",
+            "command": "/opt/homebrew/bin/g++-15",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-Wall",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

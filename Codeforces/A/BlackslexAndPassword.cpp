@@ -8,8 +8,9 @@ int main()
     cin >> T;
     while (T--)
     {
-        int n;
-        cin >> n;
+        int k,x;
+        cin >> k >> x;
+        cout << k * x + 1 << endl;
     }
 
     return 0;
